@@ -19,12 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isOn) {
             bulbBody.style.opacity = '1';
             bulbBody.style.boxShadow = `0 0 50px ${currentColor}`;
+            bulbBody.style.filter = `brightness(${currentBrightness / 100})`;
             statusDot.style.backgroundColor = '#4CAF50';
             statusText.textContent = 'Connected';
             statusText.style.color = '#4CAF50';
         } else {
             bulbBody.style.opacity = '0.3';
             bulbBody.style.boxShadow = 'none';
+            bulbBody.style.filter = 'brightness(0.3)';
             statusDot.style.backgroundColor = '#ff4444';
             statusText.textContent = 'Disconnected';
             statusText.style.color = '#ff4444';
@@ -59,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const rgbaColor = hexToRgba(currentColor, brightness);
             bulbBody.style.backgroundColor = currentColor;
             bulbBody.style.boxShadow = `0 0 50px ${rgbaColor}`;
+            bulbBody.style.filter = `brightness(${brightness})`;
         }
     }
 
