@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlight - Smart LED Control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-header">
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                <h1>Enlight</h1>
+            </div>
+            <div class="header-tagline">Smart Lighting Solutions</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Smart LED Control</h1>
+            <div class="status-indicator">
+                <span class="status-dot"></span>
+                <span class="status-text">Connected</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="bulb-container">
+                <div class="bulb">
+                    <div class="bulb-body">
+                        <div class="bulb-top"></div>
+                        <div class="bulb-bottom"></div>
+                    </div>
+                    <div class="bulb-base"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="power-control">
+                    <button id="powerBtn" class="control-btn">
+                        <i class="fas fa-power-off"></i>
+                    </button>
+                </div>
+
+                <div class="brightness-control">
+                    <label for="brightness">Brightness</label>
+                    <input type="range" id="brightness" min="0" max="100" value="100">
+                </div>
+
+                <div class="color-control">
+                    <label for="color">Color</label>
+                    <input type="color" id="color" value="#ffffff">
+                </div>
+
+                <div class="preset-colors">
+                    <button class="preset-btn" data-color="#ff0000" style="background-color: #ff0000;"></button>
+                    <button class="preset-btn" data-color="#00ff00" style="background-color: #00ff00;"></button>
+                    <button class="preset-btn" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                    <button class="preset-btn" data-color="#ffff00" style="background-color: #ffff00;"></button>
+                    <button class="preset-btn" data-color="#ff00ff" style="background-color: #ff00ff;"></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
